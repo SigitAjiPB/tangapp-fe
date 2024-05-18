@@ -1,13 +1,13 @@
 
-import { Link} from 'react-router-dom';
-
+import { Routes, Route, Link } from 'react-router-dom';
+import Billing from '../components/billing';
 export default function LandingPage() {
     return (
-    <div className="flex relative h-[1000px]">
+    <div className="flex relative">
 
 
 {/* Side Bar */}
-        <div className="flex h-screen flex-col justify-between border-e bg-white sticky top-0 left-0">
+        <div className="flex h-screen flex-col justify-between border-e bg-white sticky top-0 left-0 drop-shadow-md">
     <div className="px-4 py-6">
       <span className="grid h-10 w-32 place-content-center rounded-lg bg-sky-400 text-xs text-gray-600">
         <img 
@@ -73,12 +73,11 @@ export default function LandingPage() {
         </li>
 
         <li>
-          <a
-            to='/billing'
-            className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
-          >
-            Billing
-          </a>
+          <Link 
+            to="../components/billing" 
+            className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+              Billing
+          </Link>
 
         </li>
 
@@ -194,7 +193,7 @@ export default function LandingPage() {
           {/* End Announcement */}
 
           {/* Header */}
-          <header className="bg-white">
+          <header className="bg-white drop-shadow-md">
             <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
 
                 <div className="flex flex-1 items-center justify-end md:justify-between">
@@ -260,8 +259,12 @@ export default function LandingPage() {
             </div>
         </header>
           {/* End Header */}
+        <Routes>
+          <Route path="components/billing" element={<Billing />} />
+        </Routes>
         </div>
 {/* End Hero */}
+
 
     </div>
       )
