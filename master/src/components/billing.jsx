@@ -16,19 +16,19 @@ export default function Billing() {
 
                     <div className="mt-8 sm:mt-12">
                     <dl className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                        <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
+                        <div className="drop-shadow-md flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
                         <dt className="order-last text-lg font-medium text-gray-500">Utang Patur</dt>
 
                         <dd className="text-4xl font-extrabold text-red-400 md:text-5xl">$4.8m</dd>
                         </div>
 
-                        <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
+                        <div className="drop-shadow-md flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
                         <dt className="order-last text-lg font-medium text-gray-500">Orang Terjual</dt>
 
                         <dd className="text-4xl font-extrabold text-sky-400 md:text-5xl">24</dd>
                         </div>
 
-                        <div className="flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
+                        <div className="drop-shadow-md flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
                         <dt className="order-last text-lg font-medium text-gray-500">Organ Laris</dt>
 
                         <dd className="text-4xl font-extrabold text-sky-400 md:text-5xl">86</dd>
@@ -103,9 +103,10 @@ export default function Billing() {
                     </div>
                 </div>
 
-                <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm mt-10">
+                <table className="min-w-full table-auto divide-y-2 divide-gray-200 bg-white text-sm mt-10">
                     <thead className="ltr:text-left rtl:text-right">
                     <tr>
+                        <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">No</th>
                         <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Name</th>
                         <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Date of Debt</th>
                         <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Role</th>
@@ -115,6 +116,7 @@ export default function Billing() {
 
                     <tbody className="divide-y divide-gray-200">
                     <tr>
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">1</td>
                         <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Sigit</td>
                         <td className="whitespace-nowrap px-4 py-2 text-gray-700">24/05/1995</td>
                         <td className="whitespace-nowrap px-4 py-2 text-gray-700">Front End</td>
@@ -122,6 +124,7 @@ export default function Billing() {
                     </tr>
 
                     <tr>
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">2</td>
                         <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Pathur</td>
                         <td className="whitespace-nowrap px-4 py-2 text-gray-700">04/11/1980</td>
                         <td className="whitespace-nowrap px-4 py-2 text-gray-700">Attacker</td>
@@ -129,6 +132,7 @@ export default function Billing() {
                     </tr>
 
                     <tr>
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">3</td>
                         <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Ripqi</td>
                         <td className="whitespace-nowrap px-4 py-2 text-gray-700">24/05/1995</td>
                         <td className="whitespace-nowrap px-4 py-2 text-gray-700">All-Rounder</td>
@@ -136,6 +140,7 @@ export default function Billing() {
                     </tr>
 
                     <tr>
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">4</td>
                         <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Ilham</td>
                         <td className="whitespace-nowrap px-4 py-2 text-gray-700">24/05/2100</td>
                         <td className="whitespace-nowrap px-4 py-2 text-gray-700">Defender</td>

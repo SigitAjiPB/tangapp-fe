@@ -9,7 +9,7 @@ export default function LandingPage() {
 
 
 {/* Side Bar */}
-        <div className="flex h-screen flex-col justify-between border-e bg-white sticky top-0 left-0 drop-shadow-md">
+        <div className="lg:flex h-screen flex-col justify-between border-e bg-white sticky top-0 left-0 drop-shadow-md hidden">
           <div className="px-4 py-6">
             <span className="grid h-10 w-32 place-content-center rounded-lg bg-sky-400 text-xs text-gray-600">
               <img 

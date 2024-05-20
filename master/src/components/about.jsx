@@ -1,11 +1,15 @@
 import yui from '../assets/apaa.png'
+import aboutBg1 from '../assets/badminIMG.webp'
 
 export default function About () {
     return (
         <div>
-            <div>
+            <div className='bg-cover'
+            style={{ backgroundImage: `url(${aboutBg1})` }}
+            >
+                    
                 {/* Yui Beban */}
-                <div className="bg-sky-400 h-[45rem] -skew-y-6 flex justify-center items-center relative -top-20 sm:h-[25rem] md:h-[35rem] lg:h-[35rem] -z-10">
+                <div className="bg-sky-400 h-[25rem] -skew-y-6 flex justify-center items-center relative -top-28  sm:-top-56  sm:h-[25rem] md:h-[35rem] lg:h-[50rem] -z-10">
                     <div className="absolute bottom-0 px-6 text-white flex flex-row">
                         <img src={yui} alt="yui" className="h-44 object-cover sm:h-[15rem] md:h-[20rem] lg:h-[25rem]" />
                         <div className="sm:flex sm:flex-col sm:justify-center skew-y-6">
@@ -20,6 +24,18 @@ export default function About () {
                     </div>
                 </div>
                 {/* END yui Beban */}
+                <div>
+                    <div 
+                    className='grid grid-cols-2 px-6 gap-8'
+                    >
+                        <p 
+                        className='bg-slate-100 p-6 rounded-lg bg-cover'
+                        
+                        >Selamat datang di Tangapp, sebuah aplikasi yang kami kembangkan dengan tujuan untuk mempermudah Anda dalam mencatat dan mengelola hutang antar perorangan. Kami memahami bahwa dalam berbagai acara rutin seperti bermain bulutangkis, memasak bersama, atau kegiatan lainnya, seringkali ada kebutuhan untuk berbagi biaya dan meminjam uang. Tangapp hadir untuk membantu Anda mengatasi masalah lupa mencatat hutang yang mungkin terjadi.</p>
+
+                        <p>Tangapp adalah solusi inovatif yang dirancang untuk mencatat hutang, mengelola keuangan, dan meminimalisir risiko lupa terhadap hutang. Selain fitur pencatatan hutang, kami juga akan menambahkan berbagai fitur lain seperti kalender yang memungkinkan Anda menambahkan jadwal acara atau event yang akan diadakan.</p>
+                    </div>
+                </div>
             </div>
         </div>
     )
