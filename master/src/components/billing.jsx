@@ -58,7 +58,7 @@ export default function Billing() {
                             type="number"
                             id="Quantity"
                             value=""
-                            className="h-10 w-24 rounded border border-gray-400 sm:text-sm"
+                            className="h-8 w-24 rounded border border-gray-400 sm:text-sm outline-none pl-2"
                             />
 
                             <button type="button" className="size-10 leading-10 text-gray-600 transition hover:opacity-75">Entries
@@ -75,7 +75,7 @@ export default function Billing() {
                             type="text"
                             id="Search"
                             placeholder="Search for..."
-                            className="w-full rounded-md border-gray-200 py-2.5 pe-10 shadow-md sm:text-sm"
+                            className="w-full rounded-md border-gray-200 py-2.5 pe-10 shadow-md sm:text-sm outline-none pl-2"
                         />
 
                         <span className="absolute inset-y-0 end-0 grid w-10 place-content-center">

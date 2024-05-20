@@ -1,6 +1,7 @@
 
 import { Routes, Route, Link } from 'react-router-dom';
 import Billing from '../components/billing';
+import logo from '../assets/logo.png'
 export default function LandingPage() {
     return (
     <div className="flex relative">
@@ -11,7 +12,7 @@ export default function LandingPage() {
     <div className="px-4 py-6">
       <span className="grid h-10 w-32 place-content-center rounded-lg bg-sky-400 text-xs text-gray-600">
         <img 
-        src="./src/assets/logo.png" 
+        src={logo}
         alt="tangapp-logo"
         className='h-10'
          />
