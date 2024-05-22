@@ -27,21 +27,23 @@ export default function About () {
                     </div>
                 </div> */}
                 {/* END yui Beban */}
+
+                {/* About Text */}
                 <div>
-                <img 
-              src={logo}
-              alt="tangapp-logo"
-              className='h-20'
-              />
+                    <img 
+                    src={logo}
+                    alt="tangapp-logo"
+                    className='h-20'/>
                 </div>
                 <div className="grid p-6 grid-cols-1 gap-4 lg:grid-cols-2">
-                    <div className=" rounded-lg">
+                    <div className="rounded-lg">
                         <p className='bg-white bg-opacity-5 backdrop-blur-sm shadow-lg p-2 rounded-lg text-md text-white font-bold'>Selamat datang di Tangapp, sebuah aplikasi yang kami kembangkan dengan tujuan untuk mempermudah Anda dalam mencatat dan mengelola hutang antar perorangan. Kami memahami bahwa dalam berbagai acara rutin, seringkali ada kebutuhan untuk berbagi biaya dan meminjam uang. <img src={logo} alt="tangapp-logo" className='h-10 inline'/> hadir untuk membantu Anda mengatasi masalah lupa mencatat hutang yang mungkin terjadi.</p>
                     </div>
                     <div className="rounded-lg row-start-2 col-start-2">
                         <p className= ' bg-white bg-opacity-5 backdrop-blur-sm shadow-lg p-2 rounded-lg text-md text-white font-bold'>Tangapp adalah solusi inovatif yang dirancang untuk mencatat hutang, mengelola keuangan, dan meminimalisir risiko lupa terhadap hutang. Selain fitur pencatatan hutang, kami juga akan menambahkan berbagai fitur lain seperti kalender yang memungkinkan Anda menambahkan jadwal acara atau event yang akan diadakan.</p>
                     </div>
                 </div>
+                {/* End About Text */}
             </div>
             {/* END About Top */}
 
@@ -49,11 +51,15 @@ export default function About () {
             <span className="relative flex justify-center py-10">
                 <div
                     className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-gray-500 to-transparent opacity-75"
-                ></div>
+                    ></div>
 
                 <span className="relative z-10 bg-white px-6">Meat our Team</span>
             </span>
             {/* End Divider */}
+
+            {/* Card */}
+
+            {/* End Card */}
         </div>
     )
 }
