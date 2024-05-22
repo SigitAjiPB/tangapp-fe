@@ -5,7 +5,7 @@ import About from '../components/about';
 import logo from '../assets/logo.png'
 export default function LandingPage() {
     return (
-    <div className="flex relative">
+    <div className="flex">
 
 
 {/* Side Bar */}
@@ -195,7 +195,7 @@ export default function LandingPage() {
           {/* End Announcement */}
 
           {/* Header */}
-          <header className="bg-white drop-shadow-md z-10">
+          <header className="bg-white drop-shadow-md z-10 sticky top-0">
             <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
 
                 <div className="flex flex-1 items-center justify-end md:justify-between">
