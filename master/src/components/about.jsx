@@ -81,8 +81,7 @@ export default function About () {
                         className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
                     >
                         <p className="text-sm text-white">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perferendis hic asperiores
-                        quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?
+                        Mengubah logika kompleks menjadi solusi yang efisien, Membangun fondasi kuat untuk aplikasi yang handal, Ahli dalam desain arsitektur sistem dan integrasi API.
                         </p>
                     </div>
                     </div>
@@ -121,7 +120,7 @@ export default function About () {
 
                 {/* Rifqi */}
                 <div className="rounded-lg bg-gray-200 overflow-hidden">
-                    <a href="#" className="group relative block bg-black">
+                    <a href="#" className="group relative block bg-black h-full">
                 <img
                     alt=""
                     src={profileFait}
@@ -138,8 +137,7 @@ export default function About () {
                         className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
                     >
                         <p className="text-sm text-white">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis perferendis hic asperiores
-                        quibusdam quidem voluptates doloremque reiciendis nostrum harum. Repudiandae?
+                        Mengoptimalkan performa backend untuk pengalaman pengguna terbaik, Menciptakan backend yang solid dan scalable.
                         </p>
                     </div>
                     </div>
