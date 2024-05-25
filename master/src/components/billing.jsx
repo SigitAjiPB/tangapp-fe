@@ -1,6 +1,7 @@
+import eyesIcon from "../assets/eye-svgrepo-com.svg"
 export default function Billing() {
     return (
-        <div className="px-4 mt-4">
+        <div className="px-4 mt-4 ">
             {/* Tittle Page */}
             <div className="flex items-center gap-4">
                 <p className="text-4xl text-slate-600">Billing <span className="text-lg text-slate-400">control panel</span></p>
@@ -11,7 +12,7 @@ export default function Billing() {
 
 
             {/* Stats */}
-            <section className="bg-white">
+            {/* <section className="bg-white">
                 <div className="mx-auto max-w-screen-xl px-4 sm:px-6  lg:px-8">
 
                     <div className="mt-8 sm:mt-12">
@@ -36,41 +37,21 @@ export default function Billing() {
                     </dl>
                     </div>
                 </div>
-            </section>
+            </section> */}
             {/*  End Stats */}
 
             {/* Table */}
-            <div className="overflow-x-auto rounded-lg border border-gray-200 mt-10">
+            <div className="overflow-x-auto rounded-lg border shadow-lg mt-10 mx-10 px-10 ">
                 <div className="px-6 mt-4">
                     <div>
-                        <p className="text-2xl text-slate-600">Current Member</p>
+                        <p className="text-2xl text-slate-600">Current Events</p>
                     </div>
                     <div className="flex items-center justify-between">
-                        {/* Entries*/}
-                        <div className="mt-6">
-                        <label htmlFor="Quantity" className="sr-only"> Quantity </label>
-
-                        <div className="flex items-center gap-1">
-                            <button type="button" className="size-10 leading-10 text-gray-600 transition hover:opacity-75">Show
-                            </button>
-
-                            <input
-                            type="number"
-                            id="Quantity"
-                            value=""
-                            className="h-8 w-24 rounded border border-gray-400 sm:text-sm outline-none pl-2"
-                            />
-
-                            <button type="button" className="size-10 leading-10 text-gray-600 transition hover:opacity-75">Entries
-                            </button>
-                        </div>
-                        </div>
-                        {/* End Entries*/}
 
                         {/* Search Input */}
-                        <div className="relative w-[20rem]">
+                        <div className="relative w-[20rem] mt-10">
                         <label htmlFor="Search" className="sr-only"> Search </label>
-
+              
                         <input
                             type="text"
                             id="Search"
@@ -102,50 +83,112 @@ export default function Billing() {
                         {/* End Search Input */}
                     </div>
                 </div>
+                
 
-                <table className="min-w-full table-auto divide-y-2 divide-gray-200 bg-white text-sm mt-10">
+                <table className="min-w-full table-auto divide-y-2 divide-gray-200 bg-white text-sm mt-10 ">
                     <thead className="ltr:text-left rtl:text-right">
-                    <tr>
-                        <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">No</th>
-                        <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Name</th>
-                        <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Date of Debt</th>
-                        <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Role</th>
-                        <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Debt</th>
+                    <tr className="font-sans">
+                        <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 m-2">No</th>
+                        <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 m-2">Event Name</th>
+                        <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 m-2">Event Date</th>
+                        <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 m-2">Member</th>
+                        <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 m-2">Total cost</th>
+                        <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 m-2">Action</th>
+
                     </tr>
                     </thead>
 
                     <tbody className="divide-y divide-gray-200">
-                    <tr>
-                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">1</td>
-                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Sigit</td>
-                        <td className="whitespace-nowrap px-4 py-2 text-gray-700">24/05/1995</td>
-                        <td className="whitespace-nowrap px-4 py-2 text-gray-700">Front End</td>
-                        <td className="whitespace-nowrap px-4 py-2 text-gray-700">$120,000</td>
+                    <tr className="odd:bg-sky-50">
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900"><div className="flex justify-center">1</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900"><div className="flex justify-center">Dapur jorok Season 1</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700" ><div className="flex justify-center">24/05/1995</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700"><div className="flex justify-center">3</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700"><div className="flex justify-center">Rp120,000</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700 flex justify-center">
+                            <button className="bg-sky-400 rounded-md p-2 font-bold text-cyan-50 m-2"><img src={eyesIcon} alt="mata" className="h-5"/></button>
+                        </td>
+
+                    </tr>
+                    <tr className="odd:bg-sky-50">
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900"><div className="flex justify-center">1</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900"><div className="flex justify-center">Dapur Jorok S3</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700" ><div className="flex justify-center">24/05/1995</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700"><div className="flex justify-center">3</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700"><div className="flex justify-center">Rp120,000</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700 flex justify-center">
+                            <button className="bg-sky-400 rounded-md p-2 font-bold text-cyan-50 m-2"><img src={eyesIcon} alt="mata" className="h-5"/></button>
+                        </td>
+
+                    </tr>
+                    <tr className="odd:bg-sky-50">
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900"><div className="flex justify-center">1</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900"><div className="flex justify-center">Dapur Jorok S4</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700" ><div className="flex justify-center">24/05/1995</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700"><div className="flex justify-center">3</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700"><div className="flex justify-center">Rp120,000</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700 flex justify-center">
+                            <button className="bg-sky-400 rounded-md p-2 font-bold text-cyan-50 m-2"><img src={eyesIcon} alt="mata" className="h-5"/></button>
+                        </td>
+
+                    </tr>
+                    <tr className="odd:bg-sky-50">
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900"><div className="flex justify-center">1</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900"><div className="flex justify-center">Bull tank</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700" ><div className="flex justify-center">24/05/1995</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700"><div className="flex justify-center">3</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700"><div className="flex justify-center">Rp120,000</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700 flex justify-center">
+                            <button className="bg-sky-400 rounded-md p-2 font-bold text-cyan-50 m-2"><img src={eyesIcon} alt="mata" className="h-5"/></button>
+                        </td>
+
+                    </tr>
+                    <tr className="odd:bg-sky-50">
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900"><div className="flex justify-center">1</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900"><div className="flex justify-center">Dapur Jorok S9</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700" ><div className="flex justify-center">24/05/1995</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700"><div className="flex justify-center">3</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700"><div className="flex justify-center">Rp120,000</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700 flex justify-center">
+                            <button className="bg-sky-400 rounded-md p-2 font-bold text-cyan-50 m-2"><img src={eyesIcon} alt="mata" className="h-5"/></button>
+                        </td>
+
+                    </tr>
+                    <tr className="odd:bg-sky-50">
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900"><div className="flex justify-center">1</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900"><div className="flex justify-center">Dapur Jorok S5</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700" ><div className="flex justify-center">24/05/1995</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700"><div className="flex justify-center">3</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700"><div className="flex justify-center">Rp120,000</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700 flex justify-center">
+                            <button className="bg-sky-400 rounded-md p-2 font-bold text-cyan-50 m-2"><img src={eyesIcon} alt="mata" className="h-5"/></button>
+                        </td>
+
+                    </tr>
+                    <tr className="odd:bg-sky-50">
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900"><div className="flex justify-center">1</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900"><div className="flex justify-center">Dapur Jorok S2</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700" ><div className="flex justify-center">24/05/1995</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700"><div className="flex justify-center">3</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700"><div className="flex justify-center">Rp120,000</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700 flex justify-center">
+                            <button className="bg-sky-400 rounded-md p-2 font-bold text-cyan-50 m-2"><img src={eyesIcon} alt="mata" className="h-5"/></button>
+                        </td>
+
+                    </tr>
+                    <tr className="odd:bg-sky-50">
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900"><div className="flex justify-center">1</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900"><div className="flex justify-center">Dapur Jorok S6</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700" ><div className="flex justify-center">24/05/1995</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700"><div className="flex justify-center">3</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700"><div className="flex justify-center">Rp120,000</div></td>
+                        <td className="whitespace-nowrap px-4 py-2 text-gray-700 flex justify-center">
+                            <button className="bg-sky-400 rounded-md p-2 font-bold text-cyan-50 m-2"><img src={eyesIcon} alt="mata" className="h-5"/></button>
+                        </td>
+
                     </tr>
 
-                    <tr>
-                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">2</td>
-                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Pathur</td>
-                        <td className="whitespace-nowrap px-4 py-2 text-gray-700">04/11/1980</td>
-                        <td className="whitespace-nowrap px-4 py-2 text-gray-700">Attacker</td>
-                        <td className="whitespace-nowrap px-4 py-2 text-gray-700">$100,000</td>
-                    </tr>
 
-                    <tr>
-                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">3</td>
-                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Ripqi</td>
-                        <td className="whitespace-nowrap px-4 py-2 text-gray-700">24/05/1995</td>
-                        <td className="whitespace-nowrap px-4 py-2 text-gray-700">All-Rounder</td>
-                        <td className="whitespace-nowrap px-4 py-2 text-gray-700">$20,000</td>
-                    </tr>
-
-                    <tr>
-                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">4</td>
-                        <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">Ilham</td>
-                        <td className="whitespace-nowrap px-4 py-2 text-gray-700">24/05/2100</td>
-                        <td className="whitespace-nowrap px-4 py-2 text-gray-700">Defender</td>
-                        <td className="whitespace-nowrap px-4 py-2 text-gray-700">$22,000</td>
-                    </tr>
                     </tbody>
                 </table>
             </div>
