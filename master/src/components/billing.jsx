@@ -1,11 +1,10 @@
 import eyesIcon from "../assets/eye-svgrepo-com.svg"
 export default function Billing() {
     return (
-        <div className="px-4 mt-4 ">
+        <div className="px-4 my-4 min-w-min">
             {/* Tittle Page */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center">
                 <p className="text-4xl text-slate-600">Billing <span className="text-lg text-slate-400">control panel</span></p>
-                
             </div>
             {/* End Tittle Page */}
 
@@ -41,10 +40,10 @@ export default function Billing() {
             {/*  End Stats */}
 
             {/* Table */}
-            <div className="overflow-x-auto rounded-lg border shadow-lg mt-10 mx-10 px-10 ">
-                <div className="px-6 mt-4">
+            <div className="overflow-x-auto rounded-lg border shadow-lg mt-10 pt-8 ">
+                <div className="px-6 mt-">
                     <div>
-                        <p className="text-2xl text-slate-600">Current Events</p>
+                        <p className="text-2xl font-bold text-slate-600">Current Events</p>
                     </div>
                     <div className="flex items-center justify-between">
 

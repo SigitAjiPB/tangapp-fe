@@ -1,6 +1,7 @@
 
 import { Routes, Route, Link } from 'react-router-dom';
 import Billing from '../components/billing';
+import Home from '../components/home';
 import About from '../components/about';
 import logo from '../assets/logo.png'
 export default function LandingPage() {
@@ -11,13 +12,15 @@ export default function LandingPage() {
 {/* Side Bar */}
         <div className="lg:flex h-screen flex-col justify-between border-e bg-white sticky top-0 left-0 drop-shadow-md hidden">
           <div className="px-4 py-6">
-            <span className="grid h-10 w-32 place-content-center rounded-lg bg-sky-400 text-xs text-gray-600">
+            <Link 
+            to= "../components/home"
+            className="grid h-10 w-32 place-content-center rounded-lg bg-sky-400 text-xs text-gray-600">
               <img 
               src={logo}
               alt="tangapp-logo"
               className='h-10'
               />
-            </span>
+            </Link>
 
             <ul className="mt-6 space-y-1">
               <li>
@@ -265,9 +268,11 @@ export default function LandingPage() {
             </div>
         </header>
           {/* End Header */}
+
         <Routes>
           <Route path="components/billing" element={<Billing />} />
           <Route path='components/about' element={<About/>}></Route>
+          <Route path='components/home' element={<Home/>}></Route>
         </Routes>
         </div>
 {/* End Hero */}
