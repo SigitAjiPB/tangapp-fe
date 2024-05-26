@@ -21,6 +21,10 @@ export default function Home () {
           </div>
       </div>
       {/* END yui Beban */}
+
+
+
+      {/* CTA */}
       <div className=" flex flex-wrap justify-center gap-4 mb-10 px-8">
         <a
           className="block w-full rounded bg-sky-400 px-12 py-3 text-sm font-medium text-white shadow hover:bg-sky-500 focus:outline-none focus:ring active:bg-sky-500 sm:w-auto"
@@ -36,6 +40,7 @@ export default function Home () {
           Learn More
         </a>
       </div>
+      {/*End CTA */}
 
     </div>
   )
