@@ -10,7 +10,7 @@ export default function About () {
         <div>
             {/* About Top */}
             <div 
-            className='bg-cover bg-center h-screen p-8'
+            className='bg-cover bg-center min-h-min p-8 '
             style={{ backgroundImage: `url(${aboutBg1})` }}
             >
                 {/* About Text */}
