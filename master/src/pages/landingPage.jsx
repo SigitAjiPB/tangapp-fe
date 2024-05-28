@@ -4,6 +4,8 @@ import Billing from '../components/billing';
 import Home from '../components/home';
 import About from '../components/about';
 import logo from '../assets/logo.png'
+
+
 export default function LandingPage() {
     return (
     <div className="flex">
