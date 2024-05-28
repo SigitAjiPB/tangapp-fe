@@ -273,7 +273,7 @@ export default function LandingPage() {
         <Routes>
           <Route path="components/billing" element={<Billing />} />
           <Route path='components/about' element={<About/>}></Route>
-          <Route path='components/home' element={<Home/>}></Route>
+          <Route path='components/home/*' element={<Home/>}></Route>
         </Routes>
         </div>
 {/* End Hero */}
