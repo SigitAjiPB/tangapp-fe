@@ -141,7 +141,7 @@ export default function LandingPage() {
                       <form action="#">
                         <button
                           type="submit"
-                          className="w-full rounded-lg px-4 py-2 text-sm font-medium text-gray-500 [text-align:_inherit] hover:bg-gray-100 hover:text-gray-700"
+                          className="w-full bg-red-500 rounded-lg px-4 py-2 text-sm font-medium text-white [text-align:_inherit] hover:bg-gray-100 hover:text-gray-700"
                         >
                           Logout
                         </button>
