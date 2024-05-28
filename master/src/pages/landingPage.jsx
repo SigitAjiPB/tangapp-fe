@@ -26,7 +26,7 @@ export default function LandingPage() {
               <li>
                 <a
                   href="#"
-                  className="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
+                  className="block rounded-lg text-gray-500 hover:bg-gray-100 px-4 py-2 text-sm font-medium hover:text-gray-700 focus:bg-gray-100 focus:text-gray-700"
                 >
                   General
                 </a>
@@ -80,7 +80,7 @@ export default function LandingPage() {
               <li>
                 <Link 
                   to="../components/billing" 
-                  className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                  className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:bg-gray-100 focus:text-gray-700">
                     Billing
                 </Link>
 
@@ -178,8 +178,7 @@ export default function LandingPage() {
           {/* Announcement */}
           <div className="flex items-center justify-between gap-4 bg-sky-400 px-4 py-3 text-white">
             <p className="text-sm font-medium">
-              Mulailah mencatat hutang di 
-              <a href="#" className="inline-block underline">Tangapp</a>
+              Mulailah mencatat hutang di <a href="#" className="inline-block underline"> Tangapp</a>
             </p>
 
             <button

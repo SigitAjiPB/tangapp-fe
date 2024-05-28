@@ -29,14 +29,14 @@ export default function Home () {
         {/* Get Started */}
         <div className=" flex flex-wrap justify-center gap-4 mb-10 px-8 ">
           <a
-            className="block w-full rounded bg-sky-400 px-12 py-3 text-sm font-medium text-white shadow hover:bg-sky-500 focus:outline-none focus:ring active:bg-sky-500 sm:w-auto drop-shadow-md"
+            className="flex justify-center items-center w-full rounded bg-sky-400 px-12 py-3 text-sm font-medium text-white shadow hover:bg-sky-500 focus:outline-none focus:ring active:bg-sky-500 sm:w-auto drop-shadow-md"
             href="#"
           >
             Start Now - It's Free
           </a>
 
           <a
-            className="block w-full rounded px-12 py-3 text-sm font-medium text-sky-400 shadow hover:text-sky-500 focus:outline-none focus:ring active:text-sky-500 sm:w-auto drop-shadow-md"
+            className="flex justify-center items-center w-full rounded px-12 py-3 text-sm font-medium text-sky-400 shadow hover:text-sky-500 focus:outline-none focus:ring active:text-sky-500 sm:w-auto drop-shadow-md"
             href="#"
           >
             Learn More About Me
