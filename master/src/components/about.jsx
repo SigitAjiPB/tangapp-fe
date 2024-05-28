@@ -4,6 +4,7 @@ import aboutBg1 from '../assets/about-bg4.jpg'
 import profileEmber from '../assets/ember.jpg'
 import profileFait from '../assets/fait.jpg'
 import profileYumiko from '../assets/yumiko.jpg'
+import 'aos/dist/aos.css';
 
 export default function About () {
     return (
@@ -45,7 +46,7 @@ export default function About () {
             {/* Card */}
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 mb-20 px-10">
                 {/* Fathur */}
-                <div className=" rounded-lg bg-gray-200 overflow-hidden">
+                <div data-aos="fade-up" className=" rounded-lg bg-gray-200 overflow-hidden">
                     <a href="#" className="group relative block bg-black">
                 <img
                     alt=""
@@ -73,7 +74,7 @@ export default function About () {
                 {/* End Fathur */}
 
                 {/* Sigit */}
-                <div className=" rounded-lg overflow-hidden ">
+                <div data-aos="fade-up" className=" rounded-lg overflow-hidden ">
                     <a href="#" className="group relative block bg-black h-full">
                         <img
                             alt=""
@@ -101,7 +102,7 @@ export default function About () {
                 {/* End Sigit */}
 
                 {/* Rifqi */}
-                <div className="rounded-lg bg-gray-200 overflow-hidden">
+                <div data-aos="fade-up" className="rounded-lg bg-gray-200 overflow-hidden">
                     <a href="#" className="group relative block bg-black h-full">
                 <img
                     alt=""

@@ -1,7 +1,8 @@
 import yui from '../assets/apaa.png'
 import eventLogo from '../assets/event.svg'
 import logo from '../assets/logo.png'
-import homeBg from '../assets/home-bg.jpg'
+import 'aos/dist/aos.css';
+
 
 export default function Home () {
   return (
@@ -48,7 +49,7 @@ export default function Home () {
 
       {/* Carding */}
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 p-8">
-        <div className=" rounded-lg drop-shadow-lg">
+        <div data-aos="fade-up" className=" rounded-lg drop-shadow-lg">
           <article
             className="rounded-lg border border-gray-100 bg-white p-4 shadow-sm transition hover:shadow-lg sm:p-6"
           >
@@ -79,7 +80,8 @@ export default function Home () {
             </a>
           </article>
         </div>
-        <div className=" rounded-lg drop-shadow-lg">
+
+        <div data-aos="fade-up" className=" rounded-lg drop-shadow-lg">
           <article
             className="rounded-lg border border-gray-100 bg-white p-4 shadow-sm transition hover:shadow-lg sm:p-6"
           >
@@ -110,7 +112,8 @@ export default function Home () {
             </a>
           </article>
         </div>
-        <div className=" rounded-lg drop-shadow-lg">
+
+        <div data-aos="fade-up" className=" rounded-lg drop-shadow-lg">
           <article
             className="rounded-lg border border-gray-100 bg-white p-4 shadow-sm transition hover:shadow-lg sm:p-6"
           >
