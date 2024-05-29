@@ -5,6 +5,7 @@ import eventLogo from '../assets/event.svg'
 import logo from '../assets/logo.png'
 import 'aos/dist/aos.css';
 import Gabuts from '../pages/gabuts';
+import Eventform from '../components/eventForm';
 
 
 export default function Home () {
@@ -52,7 +53,11 @@ export default function Home () {
 
       {/* Carding */}
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 p-8">
-        <div data-aos="fade-up" className=" rounded-lg drop-shadow-lg">
+        <Link 
+        data-aos="fade-up" 
+        className=" rounded-lg drop-shadow-lg"
+        to= '../components/eventForm'
+        >
           <article
             className="rounded-lg border border-gray-100 bg-white p-4 shadow-sm transition hover:shadow-lg sm:p-6"
           >
@@ -64,25 +69,25 @@ export default function Home () {
                />
             </span>
 
-            <a href="#">
+            <div>
               <h3 className="mt-0.5 text-lg font-medium text-gray-900">
                 Buat Event Bersama Tangapp
               </h3>
-            </a>
+            </div>
 
             <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
               Buat event mu lebih berkesan bersama Tanggap
             </p>
 
-            <a href="#" className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-400">
+            <div className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-sky-400">
               Buat Event
 
               <span aria-hidden="true" className="block transition-all group-hover:ms-0.5 rtl:rotate-180">
                 &rarr;
               </span>
-            </a>
+            </div>
           </article>
-        </div>
+        </Link>
 
         <div data-aos="fade-up" className=" rounded-lg drop-shadow-lg">
           <article
@@ -360,7 +365,8 @@ export default function Home () {
 
 
       <Routes>
-        <Route path='components/gabuts' element={<Gabuts></Gabuts>}/>
+        <Route path='components/gabut' element={<Gabuts></Gabuts>}/>
+        <Route path='components/eventForm' element={<Eventform></Eventform>}/>
       </Routes>
     </div>
   )

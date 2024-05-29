@@ -26,18 +26,7 @@ const StickMan = ({ x, y, targetX, targetY }) => {
     }}
     >
 
-      <img src={Gun3} alt=""  className='h-20'/>
-      {/* <div className="w-1 h-10 bg-black mx-auto"></div>
-      <div className="w-4 h-4 bg-black rounded-full mx-auto mt-[-8px]"></div>
-      <div className="w-1 h-8 bg-black mx-auto"></div>
-      <div className="flex justify-between mt-[-4px]">
-        <div className="w-1 h-8 bg-black"></div>
-        <div className="w-1 h-8 bg-black"></div>
-      </div>
-      <div className="flex justify-between mt-[-8px]">
-        <div className="w-1 h-8 bg-black"></div>
-        <div className="w-1 h-8 bg-black"></div>
-      </div> */}
+      <img src={Gun3} alt="Gun"  className='h-20'/>
     </div>
   );
 };

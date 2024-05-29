@@ -11,7 +11,7 @@ export default function About () {
         <div>
             {/* About Top */}
             <div 
-            className='bg-cover bg-center p-8 h-screen'
+            className='bg-cover bg-center p-8 min-h-min '
             style={{ backgroundImage: `url(${aboutBg1})` }}
             >
                 {/* About Text */}
@@ -21,11 +21,11 @@ export default function About () {
                     alt="tangapp-logo"
                     className='h-20'/>
                 </div>
-                <div className="grid p-6 grid-cols-1 gap-4 lg:grid-cols-2 ">
+                <div className="grid p-6 grid-cols-1 gap-4 lg:grid-cols-2">
                     <div data-aos="fade-up" className="rounded-lg col-span-1 ">
                         <p className='bg-white bg-opacity-5 backdrop-blur-sm shadow-lg p-2 rounded-lg text-xl text-white font-bold min-w-min'>Selamat datang di Tangapp, sebuah aplikasi yang kami kembangkan dengan tujuan untuk mempermudah Anda dalam mencatat dan mengelola hutang antar perorangan. Kami memahami bahwa dalam berbagai acara rutin, seringkali ada kebutuhan untuk berbagi biaya dan meminjam uang. <img src={logo} alt="tangapp-logo" className='h-10 inline'/> hadir untuk membantu Anda mengatasi masalah lupa mencatat hutang yang mungkin terjadi.</p>
                     </div>
-                    <div data-aos="fade-up" className="rounded-lg xl:row-start-2 lg:col-start-2">
+                    <div data-aos="fade-up" className="rounded-lg lg:row-start-2 lg:col-start-2">
                         <p className= ' bg-white bg-opacity-5 backdrop-blur-sm shadow-lg p-2 rounded-lg text-xl text-white font-bold'>Tangapp adalah solusi inovatif yang dirancang untuk mencatat hutang, mengelola keuangan, dan meminimalisir risiko lupa terhadap hutang. Selain fitur pencatatan hutang, kami juga akan menambahkan berbagai fitur lain seperti kalender yang memungkinkan Anda menambahkan jadwal acara atau event yang akan diadakan.</p>
                     </div>
                 </div>

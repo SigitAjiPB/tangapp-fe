@@ -3,7 +3,8 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Billing from '../components/billing';
 import Home from '../components/home';
 import About from '../components/about';
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.png';
+import Eventform from '../components/eventForm';
 
 
 export default function LandingPage() {
@@ -178,7 +179,7 @@ export default function LandingPage() {
 {/* Hero */}
         <div className='w-screen'>
           {/* Announcement */}
-          <div className="flex items-center justify-between gap-4 bg-sky-400 px-4 py-3 text-white">
+          {/* <div className="flex items-center justify-between gap-4 bg-sky-400 px-4 py-3 text-white">
             <p className="text-sm font-medium">
               Mulailah mencatat hutang di <a href="#" className="inline-block underline"> Tangapp</a>
             </p>
@@ -195,7 +196,7 @@ export default function LandingPage() {
                 />
               </svg>
             </button>
-          </div>
+          </div> */}
           {/* End Announcement */}
 
           {/* Header */}
@@ -273,6 +274,7 @@ export default function LandingPage() {
         <Routes>
           <Route path="components/billing" element={<Billing />} />
           <Route path='components/about' element={<About/>}></Route>
+          <Route path='components/eventForm' element={<Eventform/>}></Route>
           <Route path='components/home/*' element={<Home/>}></Route>
         </Routes>
         </div>
