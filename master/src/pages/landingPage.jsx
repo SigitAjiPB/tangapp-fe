@@ -5,6 +5,12 @@ import Home from '../components/home';
 import About from '../components/about';
 import logo from '../assets/logo.png';
 import Eventform from '../components/eventForm';
+import team from '../assets/team.svg';
+import general from '../assets/general.svg';
+import billing from '../assets/billing.svg';
+import invoice from '../assets/invoice.svg';
+import account from '../assets/account.svg';
+import sidebtn from '../assets/sidebtn.svg';
 
 
 export default function LandingPage() {
@@ -13,8 +19,10 @@ export default function LandingPage() {
 
 
 {/* Side Bar */}
-        <div className="lg:flex h-screen flex-col justify-between border-e bg-white sticky top-0 left-0 drop-shadow-md hidden">
-          <div className="px-4 py-6">
+        <div className="lg:flex h-screen flex-col justify-between border-e bg-white sticky top-0 left-0 drop-shadow-md hidden min-w-max">
+          <div className="px-4 py-6 divide-y">
+            <div className='flex justify-between items-center gap-10'>
+
             <Link 
             to= "../components/home"
             className="grid h-10 w-32 place-content-center rounded-lg bg-sky-400 text-xs text-gray-600">
@@ -24,14 +32,28 @@ export default function LandingPage() {
               className='h-10'
               />
             </Link>
+            <button>
+              <img 
+              src={sidebtn} 
+              alt="sidebtn" 
+              className='h-10 hover:rotate-180 transition-all duration-300'
+              />
+            </button>
+            </div>
 
             <ul className="mt-6 space-y-1">
               <li>
                 <a
                   href="#"
-                  className="block rounded-lg text-gray-500 hover:bg-gray-100 px-4 py-2 text-sm font-medium hover:text-gray-700 focus:bg-gray-100 focus:text-gray-700"
+                  className="rounded-lg text-gray-500 hover:bg-gray-100 px-4 py-2 text-sm font-medium hover:text-gray-700 focus:bg-gray-100 focus:text-gray-700 flex justify-between items-center"
                 >
-                  General
+                  <p>General</p>
+                  <img 
+                  src={general} 
+                  alt="general" 
+                  className='h-6'
+                  />
+                  
                 </a>
               </li>
 
@@ -41,6 +63,12 @@ export default function LandingPage() {
                     className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
                     <span className="text-sm font-medium"> Teams </span>
+                    <div className='flex gap-2'>
+                    <img 
+                  src={team} 
+                  alt="team" 
+                  className='h-6'
+                  />
 
                     <span className="shrink-0 transition duration-300 group-open:-rotate-180">
                       <svg
@@ -56,6 +84,7 @@ export default function LandingPage() {
                         />
                       </svg>
                     </span>
+                    </div>
                   </summary>
 
                   <ul className="mt-2 space-y-1 px-4">
@@ -83,18 +112,29 @@ export default function LandingPage() {
               <li>
                 <Link 
                   to="../components/billing" 
-                  className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:bg-gray-100 focus:text-gray-700">
-                    Billing
+                  className=" rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:bg-gray-100 focus:text-gray-700 flex justify-between items-center">
+                    <p>Billing</p>
+                    <img 
+                    src={billing} 
+                    alt="billing" 
+                    className='h-6'
+                    />
                 </Link>
+                
 
               </li>
 
               <li>
                 <a
                   href="#"
-                  className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                  className="rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 flex justify-between items-center"
                 >
-                  Invoices
+                  <p>Invoice</p>
+                  <img 
+                  src={invoice} 
+                  alt="invoice" 
+                  className='h-6'
+                  />
                 </a>
               </li>
 
@@ -104,6 +144,12 @@ export default function LandingPage() {
                     className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                   >
                     <span className="text-sm font-medium"> Account </span>
+                    <div className='flex gap-2'>
+                    <img 
+                    src={account} 
+                    alt="account" 
+                    className='h-6'
+                    />
 
                     <span className="shrink-0 transition duration-300 group-open:-rotate-180">
                       <svg
@@ -119,6 +165,7 @@ export default function LandingPage() {
                         />
                       </svg>
                     </span>
+                    </div>
                   </summary>
 
                   <ul className="mt-2 space-y-1 px-4">

@@ -8,6 +8,7 @@ import Gabuts from '../pages/gabuts';
 import Eventform from '../components/eventForm';
 
 
+
 export default function Home () {
   return (
     <div>
@@ -45,6 +46,7 @@ export default function Home () {
           href="#"
         >
             Learn More About Me
+          <img src="" alt="" />
         </a>
       </div>
         {/*End Get Started */}
