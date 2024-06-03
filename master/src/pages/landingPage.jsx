@@ -1,6 +1,7 @@
 
 import { Routes, Route, Link } from 'react-router-dom';
 import Billing from '../components/billing';
+import Calendar from '../components/calendar';
 import Home from '../components/home';
 import About from '../components/about';
 import logo from '../assets/logo.png';
@@ -98,12 +99,12 @@ export default function LandingPage() {
                     </li>
 
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        to="../components/calendar"
                         className="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
                       >
                         Calendar
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </details>
@@ -320,6 +321,7 @@ export default function LandingPage() {
 
         <Routes>
           <Route path="components/billing" element={<Billing />} />
+          <Route path="components/calendar" element={<Calendar />} />
           <Route path='components/about' element={<About/>}></Route>
           <Route path='components/eventForm' element={<Eventform/>}></Route>
           <Route path='components/home/*' element={<Home/>}></Route>
