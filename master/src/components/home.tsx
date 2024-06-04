@@ -5,7 +5,7 @@ import eventLogo from '../assets/event.svg'
 import logo from '../assets/logo.png'
 import 'aos/dist/aos.css';
 import Gabuts from '../pages/gabuts';
-import Eventform from '../components/eventForm';
+import Eventform from './eventForm';
 
 
 

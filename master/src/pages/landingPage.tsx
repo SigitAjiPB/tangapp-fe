@@ -1,7 +1,7 @@
 
 import { Routes, Route, Link } from 'react-router-dom';
 import Billing from '../components/billing';
-import Calendar from '../components/calendar';
+// import Calendar from '../components/calendar';
 import Home from '../components/home';
 import About from '../components/about';
 import logo from '../assets/logo.png';
@@ -257,7 +257,7 @@ export default function LandingPage() {
                     <li>
                         <Link 
                         className="text-sky-400 transition hover:text-sky-400/75" 
-                        href="#"
+                        ref="#"
                         to='../components/about'
                         > About </Link>
                     </li>
@@ -321,7 +321,7 @@ export default function LandingPage() {
 
         <Routes>
           <Route path="components/billing" element={<Billing />} />
-          <Route path="components/calendar" element={<Calendar />} />
+          {/* <Route path="components/calendar" element={<Calendar />} /> */}
           <Route path='components/about' element={<About/>}></Route>
           <Route path='components/eventForm' element={<Eventform/>}></Route>
           <Route path='components/home/*' element={<Home/>}></Route>

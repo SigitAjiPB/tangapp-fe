@@ -5,8 +5,7 @@ import LandingPage from './pages/landingPage';
 import ScrollToTop from './components/scrollToTop';
 import Gabuts from './pages/gabuts';
 
-function App() {
-
+const App : React.FC = () => {
   return (
     <Router>
         <ScrollToTop/>
@@ -17,6 +16,7 @@ function App() {
         </Routes>
     </Router>
   )
+  
 }
 
 export default App
