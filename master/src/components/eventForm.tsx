@@ -106,7 +106,7 @@ export default function Eventform () {
                     <textarea
                         id="OrderNotes"
                         className="p-2 mt-2 w-full rounded-lg border-gray-200 align-top shadow-sm sm:text-sm outline-none"
-                        rows="4"
+                        rows={+4}
                         placeholder="Have any description for your event?"
                     ></textarea>
                     </div>

@@ -1,4 +1,6 @@
 
+import { useRef } from 'react'
+
 import logo from '../assets/logo.png'
 import aboutBg1 from '../assets/about-bg4.jpg'
 import profileEmber from '../assets/ember.jpg'
@@ -7,8 +9,9 @@ import profileYumiko from '../assets/yumiko.jpg'
 import 'aos/dist/aos.css';
 
 export default function About () {
+    const about  = useRef(null)
     return (
-        <div>
+        <div ref={about}>
             {/* About Top */}
             <div 
             className='bg-cover bg-center p-8 min-h-min '
