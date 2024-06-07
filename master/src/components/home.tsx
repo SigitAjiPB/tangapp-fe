@@ -4,7 +4,7 @@ import yui from '../assets/apaa.png'
 import eventLogo from '../assets/event.svg'
 import logo from '../assets/logo.png'
 import 'aos/dist/aos.css';
-import Gabuts from '../pages/gabuts';
+// import Gabuts from '../pages/gabuts';
 import Eventform from './eventForm';
 
 
@@ -367,7 +367,7 @@ export default function Home () {
 
 
       <Routes>
-        <Route path='components/gabut' element={<Gabuts></Gabuts>}/>
+        {/* <Route path='components/gabut' element={<Gabuts></Gabuts>}/> */}
         <Route path='components/eventForm' element={<Eventform></Eventform>}/>
       </Routes>
     </div>

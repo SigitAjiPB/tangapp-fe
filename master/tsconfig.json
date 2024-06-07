@@ -109,5 +109,5 @@
     "allowJs": true,
     "checkJs": true
   },
-  "include": ["src", "declarations.d.ts"]
+  "include": ["src", "src/declarations.d.ts"]
 }

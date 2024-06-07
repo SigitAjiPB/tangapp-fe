@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Target = ({ image, rotation }) => {
+interface Coords {
+  image: any;
+  rotation: any;
+}
+
+const Target = ({ image, rotation }:Coords) => {
   return (
     <div
       className="absolute left-1/2 top-1/2"

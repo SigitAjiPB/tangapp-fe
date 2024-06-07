@@ -1,6 +1,7 @@
 
 import { useRef } from 'react'
 
+import AOS from 'aos'
 import logo from '../assets/logo.png'
 import aboutBg1 from '../assets/about-bg4.jpg'
 import profileEmber from '../assets/ember.jpg'
@@ -8,7 +9,17 @@ import profileFait from '../assets/fait.jpg'
 import profileYumiko from '../assets/yumiko.jpg'
 import 'aos/dist/aos.css';
 
+AOS.init({
+    duration: 1200,
+  });
+
+  
+import React, { useEffect } from 'react';
 export default function About () {
+    useEffect(() => {
+        AOS.init({ duration: 2000 });
+        AOS.refresh();  // Untuk memastikan AOS bekerja dengan benar setelah render
+      }, []);
     const about  = useRef(null)
     return (
         <div ref={about}>
