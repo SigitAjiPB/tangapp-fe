@@ -6,6 +6,7 @@ import logo from '../assets/logo.png'
 import 'aos/dist/aos.css';
 import Gabuts from '../pages/gabuts';
 import Eventform from '../components/eventForm';
+// import MemberForm from '../components/memberForm';
 
 
 
@@ -369,6 +370,7 @@ export default function Home () {
       <Routes>
         <Route path='components/gabut' element={<Gabuts></Gabuts>}/>
         <Route path='components/eventForm' element={<Eventform></Eventform>}/>
+        {/* <Route path='components/memberForm' element={<MemberForm></MemberForm>}/> */}
       </Routes>
     </div>
   )

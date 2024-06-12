@@ -1,20 +1,33 @@
 
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, } from 'react-router-dom';
+import { useState, useEffect,  } from 'react';
 import Billing from '../components/billing';
-import Calendar from '../components/calendar';
+// import Calendar from '../components/calendar';
 import Home from '../components/home';
 import About from '../components/about';
 import logo from '../assets/logo.png';
-import Eventform from '../components/eventForm';
 import team from '../assets/team.svg';
+import Eventform from '../components/eventForm';
 import general from '../assets/general.svg';
 import billing from '../assets/billing.svg';
 import invoice from '../assets/invoice.svg';
 import account from '../assets/account.svg';
 import sidebtn from '../assets/sidebtn.svg';
+// import MemberForm from '../components/memberForm';
 
 
 export default function LandingPage() {
+  
+
+  // first content will mount after 500ms
+  const [main, setMain] = useState(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setMain(<Home />);
+    }, 500);
+  }, []);
+
     return (
     <div className="flex">
 
@@ -204,7 +217,7 @@ export default function LandingPage() {
             </ul>
           </div>
 
-          <div className="sticky inset-x-0 bottom-0 border-t border-gray-100 w-max">
+          <div className="sticky inset-x-0 bottom-0 border-t border-gray-100 w-full">
             <a href="#" className="flex items-center gap-2 bg-white p-4 hover:bg-gray-50">
               <img
                 alt=""
@@ -318,12 +331,16 @@ export default function LandingPage() {
             </div>
         </header>
           {/* End Header */}
+        <main id='main'>
+          {main}
+        </main>
 
         <Routes>
           <Route path="components/billing" element={<Billing />} />
-          <Route path="components/calendar" element={<Calendar />} />
+          {/* <Route path="components/calendar" element={<Calendar />} /> */}
           <Route path='components/about' element={<About/>}></Route>
           <Route path='components/eventForm' element={<Eventform/>}></Route>
+          {/* <Route path='components/memberForm' element={<MemberForm/>}></Route> */}
           <Route path='components/home/*' element={<Home/>}></Route>
         </Routes>
         </div>
