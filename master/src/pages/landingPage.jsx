@@ -13,6 +13,7 @@ import billing from '../assets/billing.svg';
 import invoice from '../assets/invoice.svg';
 import account from '../assets/account.svg';
 import sidebtn from '../assets/sidebtn.svg';
+import Bullet from '../components/bullet';
 // import MemberForm from '../components/memberForm';
 
 
@@ -20,11 +21,17 @@ export default function LandingPage() {
   
 
   // first content will mount after 500ms
-  const [main, setMain] = useState(null);
+  const [main, setMain] = useState(id="home");
 
   useEffect(() => {
     setTimeout(() => {
-      setMain(<Home />);
+      switch(main) {
+        case <Home/>:
+          return setMain(<Home/>)
+        case <About/>:
+          return setMain(<About/>)
+      }
+
     }, 500);
   }, []);
 
@@ -39,6 +46,7 @@ export default function LandingPage() {
 
             <Link 
             to= "../components/home"
+            onClick={()=> setMain(<Home/>)}
             className="grid h-10 w-32 place-content-center rounded-lg bg-sky-400 text-xs text-gray-600">
               <img 
               src={logo}
@@ -272,6 +280,7 @@ export default function LandingPage() {
                         className="text-sky-400 transition hover:text-sky-400/75" 
                         href="#"
                         to='../components/about'
+                        onClick={()=> setMain(<About/>)}
                         > About </Link>
                     </li>
 
@@ -336,12 +345,12 @@ export default function LandingPage() {
         </main>
 
         <Routes>
-          <Route path="components/billing" element={<Billing />} />
-          {/* <Route path="components/calendar" element={<Calendar />} /> */}
-          <Route path='components/about' element={<About/>}></Route>
-          <Route path='components/eventForm' element={<Eventform/>}></Route>
-          {/* <Route path='components/memberForm' element={<MemberForm/>}></Route> */}
-          <Route path='components/home/*' element={<Home/>}></Route>
+            <Route path='components/home/*' element={<Home/>}></Route>
+            <Route path="components/billing" element={<Billing />} />
+            {/* <Route path="components/calendar" element={<Calendar />} /> */}
+            <Route path='components/about' element={<About/>}></Route>
+            <Route path='components/eventForm' element={<Eventform/>}></Route>
+            {/* <Route path='components/memberForm' element={<MemberForm/>}></Route> */}
         </Routes>
         </div>
 {/* End Hero */}

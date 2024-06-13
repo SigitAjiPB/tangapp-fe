@@ -4,6 +4,7 @@ import Login from './pages/login'
 import LandingPage from './pages/landingPage';
 import ScrollToTop from './components/scrollToTop';
 import Gabuts from './pages/gabuts';
+// import Layout from './components/layout';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route path='/login' Component={Login}/>
           <Route path='/gabuts' Component={Gabuts}/>
         </Routes>
+        
     </Router>
   )
 }

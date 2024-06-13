@@ -10,10 +10,12 @@ function Login() {
               {`\n Bersama `}
               <span class="text-sky-400">TangApp</span> UwU
             </p>
-            <div class="bg-white w-[15rem] h-10 rounded-full flex space-x-4 items-center px-2 mt-8 hover:shadow-md border border-slate-400 hover:cursor-pointer transition-all duration-300">
+            <a 
+            href="https://tangapp-be-service-exv4a4hypq-as.a.run.app/auth/google"
+            class="bg-white w-[15rem] h-10 rounded-full flex space-x-4 items-center px-2 mt-8 hover:shadow-md border border-slate-400 hover:cursor-pointer transition-all duration-300">
               <img src={myImage} alt="google-icon" class="h-10 " />
               <p class="text-slate-700 ">Sign in with Google</p>
-            </div>
+            </a>
           </div>
         </div>
       </div>
