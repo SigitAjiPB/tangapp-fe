@@ -6,11 +6,14 @@ import logo from '../assets/logo.png'
 import 'aos/dist/aos.css';
 import Gabuts from '../pages/gabuts';
 import Eventform from '../components/eventForm';
+import LandingPage from '../pages/landingPage';
 // import MemberForm from '../components/memberForm';
 
 
 
-export default function Home () {
+const  Home = ({setMain}) => {
+
+  
   return (
     <div>
       {/* CTA */}
@@ -57,8 +60,10 @@ export default function Home () {
       {/* Carding */}
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 p-8">
         <Link 
+        
         data-aos="fade-up" 
         className=" rounded-lg drop-shadow-lg"
+        onClick={()=> setMain(<Eventform/>)}
         to= '../components/eventForm'
         >
           <article
@@ -375,3 +380,5 @@ export default function Home () {
     </div>
   )
 }
+
+export default Home

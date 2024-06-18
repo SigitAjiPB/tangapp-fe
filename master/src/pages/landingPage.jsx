@@ -1,5 +1,5 @@
 
-import { Routes, Route, Link, } from 'react-router-dom';
+import { Routes, Link, } from 'react-router-dom';
 import { useState, useEffect,  } from 'react';
 import Billing from '../components/billing';
 // import Calendar from '../components/calendar';
@@ -13,27 +13,37 @@ import billing from '../assets/billing.svg';
 import invoice from '../assets/invoice.svg';
 import account from '../assets/account.svg';
 import sidebtn from '../assets/sidebtn.svg';
-import Bullet from '../components/bullet';
 // import MemberForm from '../components/memberForm';
 
-
-export default function LandingPage() {
+ function LandingPage() {
   
 
   // first content will mount after 500ms
-  const [main, setMain] = useState(id="home");
+  const [main, setMain] = useState(<Home/>);
+
+  const handleLinkCLick = (component) => {
+    setMain(component);
+  }
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       switch(main) {
         case <Home/>:
           return setMain(<Home/>)
         case <About/>:
           return setMain(<About/>)
+        case <Billing/>:
+          return setMain(<Billing/>)
+        case <Eventform/>:
+          return setMain(<Eventform/>)
+        default:
+          return setMain(<Home/>)  
       }
 
-    }, 500);
-  }, []);
+    }, 1000);
+
+    return clearTimeout(timer) //clear timeout when component unmount
+  }, [main, setMain]);
 
     return (
     <div className="flex">
@@ -133,6 +143,7 @@ export default function LandingPage() {
 
               <li>
                 <Link 
+                  onClick={()=> setMain(<Billing/>)}
                   to="../components/billing" 
                   className=" rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:bg-gray-100 focus:text-gray-700 flex justify-between items-center">
                     <p>Billing</p>
@@ -345,11 +356,11 @@ export default function LandingPage() {
         </main>
 
         <Routes>
-            <Route path='components/home/*' element={<Home/>}></Route>
-            <Route path="components/billing" element={<Billing />} />
+            {/* <Route path='components/home/*' element={<Home/>}></Route> */}
+            {/* <Route path="components/billing" element={<Billing />} /> */}
             {/* <Route path="components/calendar" element={<Calendar />} /> */}
-            <Route path='components/about' element={<About/>}></Route>
-            <Route path='components/eventForm' element={<Eventform/>}></Route>
+            {/* <Route path='components/about' element={<About/>}></Route> */}
+            {/* <Route path='components/eventForm' element={<Eventform/>}></Route> */}
             {/* <Route path='components/memberForm' element={<MemberForm/>}></Route> */}
         </Routes>
         </div>
@@ -358,5 +369,6 @@ export default function LandingPage() {
 
     </div>
       )
-
 }
+
+export default LandingPage
