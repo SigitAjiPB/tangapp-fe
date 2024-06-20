@@ -5,14 +5,10 @@ import eventLogo from '../assets/event.svg'
 import logo from '../assets/logo.png'
 import 'aos/dist/aos.css';
 import Gabuts from '../pages/gabuts';
-import Eventform from '../components/eventForm';
-import LandingPage from '../pages/landingPage';
-// import MemberForm from '../components/memberForm';
+// import Eventform from '../components/eventForm';
 
 
-
-const  Home = ({setMain}) => {
-
+export default function Home() {
   
   return (
     <div>
@@ -58,12 +54,13 @@ const  Home = ({setMain}) => {
       {/* End CTA */}
 
       {/* Carding */}
+
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 p-8">
         <Link 
         
         data-aos="fade-up" 
         className=" rounded-lg drop-shadow-lg"
-        onClick={()=> setMain(<Eventform/>)}
+        // onClick={()=> setMain(<Eventform/>)}
         to= '../components/eventForm'
         >
           <article
@@ -96,6 +93,7 @@ const  Home = ({setMain}) => {
             </div>
           </article>
         </Link>
+        {/* <Navigation/> */}
 
         <div data-aos="fade-up" className=" rounded-lg drop-shadow-lg">
           <article
@@ -374,11 +372,9 @@ const  Home = ({setMain}) => {
 
       <Routes>
         <Route path='components/gabut' element={<Gabuts></Gabuts>}/>
-        <Route path='components/eventForm' element={<Eventform></Eventform>}/>
+        {/* <Route path='components/eventForm' element={<Eventform></Eventform>}/> */}
         {/* <Route path='components/memberForm' element={<MemberForm></MemberForm>}/> */}
       </Routes>
     </div>
   )
 }
-
-export default Home

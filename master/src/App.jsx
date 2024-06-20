@@ -11,12 +11,11 @@ function App() {
   return (
     <Router>
         <ScrollToTop/>
-        <Routes>
-          <Route path='*' Component={LandingPage}/>
-          <Route path='/login' Component={Login}/>
-          <Route path='/gabuts' Component={Gabuts}/>
-        </Routes>
-        
+          <Routes>
+            <Route path='*' Component={LandingPage}/>
+            <Route path='/login' Component={Login}/>
+            <Route path='/gabuts' Component={Gabuts}/>
+          </Routes>
     </Router>
   )
 }

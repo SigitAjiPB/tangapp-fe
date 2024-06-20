@@ -1,5 +1,5 @@
 
-import { Routes, Link, } from 'react-router-dom';
+import { Routes,Route, Link, } from 'react-router-dom';
 import { useState, useEffect,  } from 'react';
 import Billing from '../components/billing';
 // import Calendar from '../components/calendar';
@@ -13,6 +13,7 @@ import billing from '../assets/billing.svg';
 import invoice from '../assets/invoice.svg';
 import account from '../assets/account.svg';
 import sidebtn from '../assets/sidebtn.svg';
+
 // import MemberForm from '../components/memberForm';
 
  function LandingPage() {
@@ -20,10 +21,6 @@ import sidebtn from '../assets/sidebtn.svg';
 
   // first content will mount after 500ms
   const [main, setMain] = useState(<Home/>);
-
-  const handleLinkCLick = (component) => {
-    setMain(component);
-  }
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -360,7 +357,7 @@ import sidebtn from '../assets/sidebtn.svg';
             {/* <Route path="components/billing" element={<Billing />} /> */}
             {/* <Route path="components/calendar" element={<Calendar />} /> */}
             {/* <Route path='components/about' element={<About/>}></Route> */}
-            {/* <Route path='components/eventForm' element={<Eventform/>}></Route> */}
+            <Route path='components/eventForm' element={<Eventform/>}></Route>
             {/* <Route path='components/memberForm' element={<MemberForm/>}></Route> */}
         </Routes>
         </div>
