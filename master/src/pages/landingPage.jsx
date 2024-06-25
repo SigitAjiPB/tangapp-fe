@@ -13,38 +13,47 @@ import billing from '../assets/billing.svg';
 import invoice from '../assets/invoice.svg';
 import account from '../assets/account.svg';
 import sidebtn from '../assets/sidebtn.svg';
+import makeEvent from '../assets/makeEvent.svg';
 
 // import MemberForm from '../components/memberForm';
+const componentMap = {
+  Home: <Home />,
+  About: <About />,
+  Billing: <Billing />,
+  Eventform: <Eventform />
+};
+
 
  function LandingPage() {
+  const getInitialComponent = () => {
+    const savedComponent = localStorage.getItem('main');
+    return componentMap[savedComponent] || <Home />;
+  };
   
 
-  // first content will mount after 500ms
-  const [main, setMain] = useState(<Home/>);
+  // first content will mount after 100ms
+  const [main, setMain] = useState(getInitialComponent);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      switch(main) {
-        case <Home/>:
-          return setMain(<Home/>)
-        case <About/>:
-          return setMain(<About/>)
-        case <Billing/>:
-          return setMain(<Billing/>)
-        case <Eventform/>:
-          return setMain(<Eventform/>)
-        default:
-          return setMain(<Home/>)  
+      const componentName = Object.keys(componentMap).find(key => {
+        const componentElement = componentMap[key];
+        return componentElement.type === main.type;
+      });
+      if (componentName) {
+        localStorage.setItem('main', componentName);
       }
+    }, 100);
 
-    }, 1000);
+    return ()=> clearTimeout(timer)
+  }, [main]);
 
-    return clearTimeout(timer) //clear timeout when component unmount
-  }, [main, setMain]);
+  const changeComponent = (name) => {
+    setMain(componentMap[name]);
+  }
 
     return (
     <div className="flex">
-
 
 {/* Side Bar */}
         <div className="lg:flex h-screen flex-col justify-between border-e bg-white sticky top-0 left-0 drop-shadow-md hidden min-w-max">
@@ -53,7 +62,7 @@ import sidebtn from '../assets/sidebtn.svg';
 
             <Link 
             to= "../components/home"
-            onClick={()=> setMain(<Home/>)}
+            onClick={()=> changeComponent('Home')}
             className="grid h-10 w-32 place-content-center rounded-lg bg-sky-400 text-xs text-gray-600">
               <img 
               src={logo}
@@ -72,8 +81,9 @@ import sidebtn from '../assets/sidebtn.svg';
 
             <ul className="mt-6 space-y-1">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to= "../components/home"
+                  onClick={()=> changeComponent('Home')}
                   className="rounded-lg text-gray-500 hover:bg-gray-100 px-4 py-2 text-sm font-medium hover:text-gray-700 focus:bg-gray-100 focus:text-gray-700 flex justify-between items-center"
                 >
                   <p>General</p>
@@ -83,7 +93,7 @@ import sidebtn from '../assets/sidebtn.svg';
                   className='h-6'
                   />
                   
-                </a>
+                </Link>
               </li>
 
               <li>
@@ -140,7 +150,7 @@ import sidebtn from '../assets/sidebtn.svg';
 
               <li>
                 <Link 
-                  onClick={()=> setMain(<Billing/>)}
+                  onClick={()=> changeComponent('Billing')}
                   to="../components/billing" 
                   className=" rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:bg-gray-100 focus:text-gray-700 flex justify-between items-center">
                     <p>Billing</p>
@@ -166,6 +176,21 @@ import sidebtn from '../assets/sidebtn.svg';
                   className='h-6'
                   />
                 </a>
+              </li>
+
+              <li>
+                <Link
+                  to='../components/eventform'
+                  onClick={()=> changeComponent('Eventform')}
+                  className="rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 flex justify-between items-center"
+                >
+                  <p>Make Event</p>
+                  <img 
+                  src={makeEvent}
+                  alt="makeEvent" 
+                  className='h-6'
+                  />
+                </Link>
               </li>
 
               <li>
@@ -230,6 +255,7 @@ import sidebtn from '../assets/sidebtn.svg';
                   </ul>
                 </details>
               </li>
+
             </ul>
           </div>
 
@@ -288,7 +314,7 @@ import sidebtn from '../assets/sidebtn.svg';
                         className="text-sky-400 transition hover:text-sky-400/75" 
                         href="#"
                         to='../components/about'
-                        onClick={()=> setMain(<About/>)}
+                        onClick={()=> changeComponent('About')}
                         > About </Link>
                     </li>
 
@@ -357,7 +383,7 @@ import sidebtn from '../assets/sidebtn.svg';
             {/* <Route path="components/billing" element={<Billing />} /> */}
             {/* <Route path="components/calendar" element={<Calendar />} /> */}
             {/* <Route path='components/about' element={<About/>}></Route> */}
-            <Route path='components/eventForm' element={<Eventform/>}></Route>
+            {/* <Route path='components/eventForm' element={<Eventform/>}></Route> */}
             {/* <Route path='components/memberForm' element={<MemberForm/>}></Route> */}
         </Routes>
         </div>

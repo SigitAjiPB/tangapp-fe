@@ -116,9 +116,9 @@ export default function Eventform () {
                     <div className='col-span-2'>
                         <label htmlFor="Quantity" className=" block text-sm font-medium text-gray-700"> Participant: </label>
 
-                        <div className="flex items-center border-gray-200 bg-white text-sm text-gray-700 shadow-sm mt-1 rounded-md">
+                        <div className="px-2 flex items-center border-gray-200 bg-white text-sm text-gray-700 shadow-sm mt-1 rounded-md">
                             <button type="button" className="flex   justify-center items-center  text-gray-600 transition hover:opacity-75">
-                            <img src={minus} alt="minus" className='h-10'/>
+                            <img src={minus} alt="minus" className='h-6'/>
                             </button>
 
                             <input
@@ -128,7 +128,7 @@ export default function Eventform () {
                             />
 
                             <button type="button" className="flex   justify-center items-center  text-gray-600 transition hover:opacity-75">
-                            <img src={plus} alt="plus" className='h-10'/>
+                            <img src={plus} alt="plus" className='h-6'/>
                             </button>
                         </div>
                     </div>

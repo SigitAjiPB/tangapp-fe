@@ -8,37 +8,6 @@ export default function Billing() {
             </div>
             {/* End Tittle Page */}
 
-
-
-            {/* Stats */}
-            {/* <section className="bg-white">
-                <div className="mx-auto max-w-screen-xl px-4 sm:px-6  lg:px-8">
-
-                    <div className="mt-8 sm:mt-12">
-                    <dl className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                        <div className="drop-shadow-md flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
-                        <dt className="order-last text-lg font-medium text-gray-500">Utang Patur</dt>
-
-                        <dd className="text-4xl font-extrabold text-red-400 md:text-5xl">$4.8m</dd>
-                        </div>
-
-                        <div className="drop-shadow-md flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
-                        <dt className="order-last text-lg font-medium text-gray-500">Orang Terjual</dt>
-
-                        <dd className="text-4xl font-extrabold text-sky-400 md:text-5xl">24</dd>
-                        </div>
-
-                        <div className="drop-shadow-md flex flex-col rounded-lg border border-gray-100 px-4 py-8 text-center">
-                        <dt className="order-last text-lg font-medium text-gray-500">Organ Laris</dt>
-
-                        <dd className="text-4xl font-extrabold text-sky-400 md:text-5xl">86</dd>
-                        </div>
-                    </dl>
-                    </div>
-                </div>
-            </section> */}
-            {/*  End Stats */}
-
             {/* Table */}
             <div className="overflow-x-auto rounded-lg border shadow-lg mt-10 pt-8 ">
                 <div className="px-6 mt-">

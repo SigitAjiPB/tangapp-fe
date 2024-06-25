@@ -39,13 +39,13 @@ export default function Home() {
             to='/gabuts'
         >
             Start Now - It's Free
-        </Link>
+        </Link> 
 
         <a
             className="flex justify-center items-center w-full rounded px-12 py-3 text-sm font-medium text-sky-400 shadow hover:text-sky-500 focus:outline-none focus:ring active:text-sky-500 sm:w-auto drop-shadow-md"
           href="#"
         >
-            Learn More About Me
+            Learn More About Us
           <img src="" alt="" />
         </a>
       </div>
@@ -61,7 +61,7 @@ export default function Home() {
         data-aos="fade-up" 
         className=" rounded-lg drop-shadow-lg"
         // onClick={()=> setMain(<Eventform/>)}
-        to= '../components/eventForm'
+        // to= '../components/eventForm'
         >
           <article
             className="rounded-lg border border-gray-100 bg-white p-4 shadow-sm transition hover:shadow-lg sm:p-6"
