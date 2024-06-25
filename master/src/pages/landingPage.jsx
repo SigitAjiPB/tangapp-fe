@@ -1,5 +1,5 @@
 
-import { Routes,Route, Link, } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { useState, useEffect,  } from 'react';
 import Billing from '../components/billing';
 // import Calendar from '../components/calendar';
@@ -14,13 +14,16 @@ import invoice from '../assets/invoice.svg';
 import account from '../assets/account.svg';
 import sidebtn from '../assets/sidebtn.svg';
 import makeEvent from '../assets/makeEvent.svg';
+import Login from '../pages/login'
+
 
 // import MemberForm from '../components/memberForm';
 const componentMap = {
   Home: <Home />,
   About: <About />,
   Billing: <Billing />,
-  Eventform: <Eventform />
+  Eventform: <Eventform />,
+  Login: <Login/>
 };
 
 
@@ -344,7 +347,9 @@ const componentMap = {
                     <div className="sm:flex sm:gap-4">
                         <Link
                         className="block rounded-md bg-sky-400 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-sky-700"
-                        to='/login'>Login</Link>
+                        to='/login'
+                        onClick={()=> changeComponent('Login')}
+                        >Login</Link>
 
                     <a
                         className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-sky-400 transition hover:text-sky-600/75 sm:block"
@@ -378,14 +383,14 @@ const componentMap = {
           {main}
         </main>
 
-        <Routes>
+        {/* <Routes> */}
             {/* <Route path='components/home/*' element={<Home/>}></Route> */}
             {/* <Route path="components/billing" element={<Billing />} /> */}
             {/* <Route path="components/calendar" element={<Calendar />} /> */}
             {/* <Route path='components/about' element={<About/>}></Route> */}
             {/* <Route path='components/eventForm' element={<Eventform/>}></Route> */}
             {/* <Route path='components/memberForm' element={<MemberForm/>}></Route> */}
-        </Routes>
+        {/* </Routes> */}
         </div>
 {/* End Hero */}
 
